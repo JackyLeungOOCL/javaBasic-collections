@@ -64,10 +64,12 @@ public class MyStack {
     private int pop() {
         // TODO: Please pop one element from the array.
         // <--start
-        this.count--;
-        return this.storage[this.count];
+        if (count > 0) {
+            this.count--;
+            return this.storage[this.count];
+        }
         // --end-->
 
-//        throw new UnsupportedOperationException("Stack is empty.");
+        throw new UnsupportedOperationException("Stack is empty.");
     }
 }
